@@ -28,11 +28,11 @@ const postEvento = async(req, res) => {
 
 
 const putEvento = async(req, res) =>{
-    const { _id,nombre_evento, hora_i, hora_f, encargado_f, encargado_e,encargado_e_t,nro_participantes,estado} = req.body;
+    const { _id,nombre_evento, hora_i, hora_f, encargado_f, encargado_e,encargado_e_t,nro_participantes,estado, valor} = req.body;
     try {
         const evento = await Evento.findByIdAndUpdate(
             _id,
-            { nombre_evento, hora_i, hora_f, encargado_f,  encargado_e, encargado_e_t, nro_participantes, estado},
+            { nombre_evento, hora_i, hora_f, encargado_f,  encargado_e, encargado_e_t, nro_participantes, estado, valor},
             { new: true }
         );
         if (!evento) {

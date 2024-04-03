@@ -41,6 +41,10 @@ const EventoSchema = ({
     estado: {
         type:String,
         required: [true, 'El estado incial del evento']
+    },
+    valor: {
+        type: Number,
+        required: [true, 'El valor es requerido']
     }
 })
 
